@@ -12,39 +12,37 @@ video{position:fixed;top:0;left:0;width:100%;height:100%;object-fit:cover;z-inde
 
 .menu{
   position:absolute;left:15px;top:50px;
-  width:calc(100% - 30px);max-width:300px;
-  display:flex;flex-direction:column;gap:10px
+  width:calc(100% - 30px);max-width:280px;
+  display:flex;flex-direction:column;gap:8px
 }
 .logo{
   color:white;font-size:22px;font-weight:900;margin-bottom:8px;
   text-shadow:0 0 10px rgba(255,255,255,.6),0 0 20px rgba(255,255,255,.4)
 }
-.menu a{
-  text-decoration:none;color:white;padding:13px 16px;border-radius:14px;
-  background:rgba(8,25,45,.7);backdrop-filter:blur(8px);
-  border:1px solid rgba(120,212,255,.3);transition:.2s;
+.menu a.tool-link{
+  text-decoration:none;color:white;padding:11px 14px;border-radius:12px;
+  background:rgba(8,25,45,.55);backdrop-filter:blur(8px);
+  border:1px solid rgba(120,212,255,.2);transition:.2s;
   -webkit-tap-highlight-color:transparent
 }
-.menu a:active{transform:translateX(4px);border-color:#ffc34a}
+.menu a.tool-link:active{transform:translateX(4px);border-color:#ffc34a}
 @media(hover:hover){
-  .menu a:hover{transform:translateX(5px);border-color:#ffc34a}
+  .menu a.tool-link:hover{transform:translateX(5px);border-color:#ffc34a}
 }
-.title{font-size:17px;font-weight:800}
-.desc{margin-top:3px;font-size:12px;color:#b8dfff;opacity:.85}
+.title{font-size:16px;font-weight:800}
+.desc{margin-top:3px;font-size:11px;color:#b8dfff;opacity:.8}
 
-/* ホームボタン：控えめなテキストリンク */
 .home-btn{
-  display:inline-flex;align-items:center;gap:5px;
-  margin-top:4px;
+  display:inline-flex;align-items:center;gap:4px;
+  margin-top:2px;
   text-decoration:none;
-  color:rgba(255,255,255,.55);
-  font-size:12px;
-  padding:6px 0;
+  color:rgba(255,255,255,.4);
+  font-size:11px;
+  padding:5px 0;
   transition:color .2s;
   -webkit-tap-highlight-color:transparent
 }
-.home-btn:active,.home-btn:hover{color:rgba(255,255,255,.9)}
-.home-btn svg{flex-shrink:0}
+.home-btn:active,.home-btn:hover{color:rgba(255,255,255,.75)}
 </style>
 </head>
 <body>
@@ -55,20 +53,17 @@ video{position:fixed;top:0;left:0;width:100%;height:100%;object-fit:cover;z-inde
 <div class="menu">
   <div class="logo">コスト計算room</div>
 
-  <a href="https://kekj12kek-sudo.github.io/wos-hero-gear-planner/">
+  <a class="tool-link" href="https://kekj12kek-sudo.github.io/wos-hero-gear-planner/">
     <div class="title">英雄装備コスト計算</div>
     <div class="desc">神話装備・精錬鍛造・配能計算</div>
   </a>
-  <a href="https://kekj12kek-sudo.github.io/wos-lord-gem-planner/">
+  <a class="tool-link" href="https://kekj12kek-sudo.github.io/wos-lord-gem-planner/">
     <div class="title">宝石・領主装備コスト計算</div>
     <div class="desc">宝石LvUP・領主装備強化</div>
   </a>
 
   <a class="home-btn" href="https://kekj12kek-sudo.github.io/1648-hq/">
-    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M1 5.5L6.5 1L12 5.5V12H8.5V8.5H4.5V12H1V5.5Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" fill="none"/>
-    </svg>
-    1648 HQに戻る
+    ← 戻る
   </a>
 </div>
 </body>
